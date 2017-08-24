@@ -1,7 +1,7 @@
 package task05.task0501.task050101;
 
 
-public class MyBomb extends Thread {
+class MyBomb extends Thread {
     public void run() {
         for (int i = 10; i>=0; i--) {
             System.out.println(i);
