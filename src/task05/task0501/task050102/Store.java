@@ -2,8 +2,9 @@ package task05.task0501.task050102;
 
 class Store {
     private int value = 0;
+    private final int amount = 1_000_000;
     private boolean isChanged = true; // false = no changes; true = value is changed;
-    // true - by default because we need to start from 0 according the task
+    // default value for isChanged is true to fit the task (starting from 0..)
 
     synchronized void printValue() {
         while (!isChanged) {
@@ -33,4 +34,5 @@ class Store {
     public int getValue(){
         return this.value;
     }
+    public int getAmount() { return this.amount;}
 }

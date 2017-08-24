@@ -8,7 +8,7 @@ class Printer implements Runnable{
         new Thread(this, "Printer").start();
     }
     public void run() {
-        while(true) {
+        while(store.getValue() < store.getAmount()-1) {
             store.printValue();
         }
     }
