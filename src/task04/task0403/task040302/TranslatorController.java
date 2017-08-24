@@ -8,9 +8,9 @@ class TranslatorController {
 
     private final MenuHeader menuMain = new MenuHeader(menuListForShop);
     private static final ArrayList<String> menuListForShop = new ArrayList<>(
-            Arrays.asList("Main menu for Translator: ",
+            Arrays.asList("Store menu for Translator: ",
                     "\n[1] - init small Vocabulary",
-                    "\t[2] - print Dict         ",
+                    "\t[2] - printValue Dict         ",
                     "\t[3] - add translation    ",
                     "\n[4] - translate WORD     ",
                     "\t[5] - translate PHRASE   ",

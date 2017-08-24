@@ -13,5 +13,4 @@ public class MyBomb extends Thread {
         }
         System.out.println("Bomb");
     }
-
 }

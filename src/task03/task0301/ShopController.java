@@ -27,7 +27,7 @@ public class ShopController {
                 case 2:
                     System.out.println("--info: adding new Departments (auto)...");
                     firstShop.addRandomDepts();
-                    System.out.println("--info: successfully added departments. Now we have " + firstShop.getQtyDepts() +
+                    System.out.println("--info: successfully changeValue departments. Now we have " + firstShop.getQtyDepts() +
                             ".");
                     break;
                 case 3:
