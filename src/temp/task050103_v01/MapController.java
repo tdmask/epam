@@ -88,7 +88,6 @@ public class MapController {
     }
 
     public static void printMap(Map<Integer, String> map){
-
         for (Map.Entry entry : map.entrySet()) {
             System.out.printf("%20s %5s %20s\n",entry.getKey().toString(),"-",entry.getValue().toString());
         }
