@@ -1,4 +1,4 @@
-package task05.task0501.task050103;
+package temp.task050103_v01;
 
 import java.util.HashMap;
 import java.util.Map;
