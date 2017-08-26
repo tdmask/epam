@@ -10,8 +10,8 @@ public class Main {
 
         final int NUMBER_OF_THREADS = 60;
         final int TOTAL = 3_000_000;
-        Map<Integer, String> hmap = new HashMap<>(16);
-        Map<Integer, String> cmap = new ConcurrentHashMap<>(16);
+        Map<Integer, String> hmap = new HashMap<>();
+        Map<Integer, String> cmap = new ConcurrentHashMap<>();
 
         System.out.println("---");
         MapController mc1 = new MapController(hmap, TOTAL/NUMBER_OF_THREADS, NUMBER_OF_THREADS);

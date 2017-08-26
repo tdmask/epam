@@ -17,19 +17,15 @@ public class WriteRunner implements Runnable {
     @Override
     public void run() {
 //        System.out.println("Write: " + Thread.currentThread().getName());
-
         if (map instanceof HashMap)
             writeSync(beginValue, count, Thread.currentThread().getName());
         else
             write(beginValue, count, Thread.currentThread().getName());
-
     }
 
-    public void writeSync(int beginValue, int count, String str) {
+    public synchronized void writeSync(int beginValue, int count, String str) {
         for (int i = beginValue; i < (beginValue + count); i++) {
-            synchronized (map) {
-                map.put(i, str + ":" + i);
-            }
+            map.put(i, str + ":" + i);
         }
     }
 

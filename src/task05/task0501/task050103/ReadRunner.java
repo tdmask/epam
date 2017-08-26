@@ -19,19 +19,17 @@ public class ReadRunner implements Runnable {
             read();
     }
 
-    public void readSyn() {
-        synchronized (map) {
-            for (Map.Entry entry : map.entrySet()) {
-                entry.getKey();
-                entry.getValue();
-            }
+    public synchronized void readSyn() {
+        for (Map.Entry entry : map.entrySet()) {
+            entry.getKey();
+            entry.getValue();
         }
     }
 
     public void read() {
-            for (Map.Entry entry : map.entrySet()) {
-                entry.getKey();
-                entry.getValue();
-            }
+        for (Map.Entry entry : map.entrySet()) {
+            entry.getKey();
+            entry.getValue();
+        }
     }
 }
