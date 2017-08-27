@@ -1,5 +1,6 @@
 package task05.task0501.task050103;
 // ver.2
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -19,17 +20,36 @@ public class ReadRunner implements Runnable {
             read();
     }
 
-    public synchronized void readSyn() {
-        for (Map.Entry entry : map.entrySet()) {
-            entry.getKey();
-            entry.getValue();
+    public void readSyn() {
+
+/*
+        for (int i = 0; i < map.size(); i++) {
+            synchronized (map) {
+                map.get(i);
+            }
         }
+*/
+
+        synchronized (map) {
+            for (Map.Entry entry : map.entrySet()) {
+                entry.getKey();
+                entry.getValue();
+            }
+        }
+
     }
 
     public void read() {
-        for (Map.Entry entry : map.entrySet()) {
-            entry.getKey();
-            entry.getValue();
+/*
+        for (int i = 0; i < map.size(); i++) {
+            map.get(i);
+        }
+*/
+        synchronized (map) {
+            for (Map.Entry entry : map.entrySet()) {
+                entry.getKey();
+                entry.getValue();
+            }
         }
     }
 }

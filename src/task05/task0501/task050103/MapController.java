@@ -34,7 +34,7 @@ public class MapController {
     }
 
 
-    public void calculation() throws InterruptedException {
+    public void calculation() {
         List<Thread> threads = new ArrayList<>();
 
 //        System.out.println("ArrayList.size [start]:" + threads.size());
@@ -42,14 +42,21 @@ public class MapController {
         for (int i = 0; i < numberOfThreads; i++) {
             threads.add(new Thread(new WriteRunner(map, i * total + 1, total)));
         }
+
         for (int i = 0; i < numberOfThreads; i++) {
             threads.add(new Thread(new ReadRunner(map)));
         }
+
         for (Thread thread : threads) {
             thread.start();
         }
         for (Thread thread : threads) {
-            thread.join();
+            try {
+                thread.join();
+            } catch (InterruptedException e) {
+                System.out.println("error: ");
+
+            }
         }
         Stopwatch.stop();
         this.printSize();

@@ -23,9 +23,12 @@ public class WriteRunner implements Runnable {
             write(beginValue, count, Thread.currentThread().getName());
     }
 
-    public synchronized void writeSync(int beginValue, int count, String str) {
+    public void writeSync(int beginValue, int count, String str) {
         for (int i = beginValue; i < (beginValue + count); i++) {
+            synchronized (map) {
             map.put(i, str + ":" + i);
+
+            }
         }
     }
 
