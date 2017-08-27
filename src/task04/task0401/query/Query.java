@@ -40,7 +40,7 @@ public class Query {
 
     public void listFlightByDayOfWeekAndTime(Flight[] flights, TargetData targetData) {
         boolean isResultEmpty = true;
-        System.out.print("The list of flights for " + targetData.getTargetDayOfWeek() + " and later then "
+        System.out.print("The list of flights for " + targetData.getTargetDayOfWeek() + " and later than "
                 + targetData.getTargetTime() + " : ");
         Spreadsheet.printHeader();
         for (Flight flight : flights) {

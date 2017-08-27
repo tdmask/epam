@@ -1,8 +1,8 @@
-package temp.Serilization.pack2;
+package temp.topic_Serilization.pack2;
 
 
 
-import temp.Serilization.pack1.TestSerial;
+import temp.topic_Serilization.pack1.TestSerial;
 
 import java.io.FileInputStream;
 import java.io.IOException;
