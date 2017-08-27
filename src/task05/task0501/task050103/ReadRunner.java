@@ -1,5 +1,5 @@
 package task05.task0501.task050103;
-
+// ver.2
 import java.util.HashMap;
 import java.util.Map;
 
