@@ -21,7 +21,6 @@ public class ReadRunner implements Runnable {
     }
 
     public void readSyn() {
-
 /*
         for (int i = 0; i < map.size(); i++) {
             synchronized (map) {
@@ -29,7 +28,6 @@ public class ReadRunner implements Runnable {
             }
         }
 */
-
         synchronized (map) {
             for (Map.Entry entry : map.entrySet()) {
                 entry.getKey();
@@ -45,11 +43,9 @@ public class ReadRunner implements Runnable {
             map.get(i);
         }
 */
-        synchronized (map) {
             for (Map.Entry entry : map.entrySet()) {
                 entry.getKey();
                 entry.getValue();
             }
-        }
     }
 }

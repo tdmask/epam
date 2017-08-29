@@ -38,7 +38,7 @@ public class MapController {
         List<Thread> threads = new ArrayList<>();
 
 //        System.out.println("ArrayList.size [start]:" + threads.size());
-        Stopwatch.start();
+
         for (int i = 0; i < numberOfThreads; i++) {
             threads.add(new Thread(new WriteRunner(map, i * total + 1, total)));
         }
@@ -47,15 +47,13 @@ public class MapController {
             threads.add(new Thread(new ReadRunner(map)));
         }
 
+        Stopwatch.start();
         for (Thread thread : threads) {
             thread.start();
-        }
-        for (Thread thread : threads) {
             try {
                 thread.join();
             } catch (InterruptedException e) {
-                System.out.println("error: ");
-
+                e.printStackTrace();
             }
         }
         Stopwatch.stop();

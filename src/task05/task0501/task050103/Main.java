@@ -8,7 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        final int NUMBER_OF_THREADS = 4;
+        final int NUMBER_OF_THREADS = 8;
         final int TOTAL = 3_000_000;
         Map<Integer, String> hmap = new HashMap<>();
         Map<Integer, String> cmap = new ConcurrentHashMap<>();
